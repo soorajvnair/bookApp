@@ -1,0 +1,24 @@
+<ion-view view-title="Add Images">
+	<ion-content>
+		<div class="card" ng-if="cameraActive">
+			<h4 class="padding">{{statusMessage}}</h4>
+		</div>
+		<div class="card">
+			<div ng-switch on="imageDefined">
+				<div ng-switch-when="false">
+					<img src="http://placehold.it/300x300" alt="" width="100%">
+				</div>
+				<div ng-switch-when="true">
+					<img ng-src="{{imageSrc}}" alt="" height="" width="100%">
+				</div>
+			</div>
+		</div>
+		<div class="padding">
+			<button class="button button-block button-outline button-positive ion-ios-camera-outline" ng-click="snapPicture()">
+			</button>
+			<button class="button button-block button-positive" ng-click="addBookDetails()" ng-if="imageCaptured">
+				Next
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

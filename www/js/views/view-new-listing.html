@@ -1,0 +1,26 @@
+<ion-view view-title="Your New Listing">
+	<ion-content>
+		<div class="list card">		
+			<div class="item item-avatar">
+				<img ng-src="{{imageSrc}}">
+				<h2>{{listing.bookDetails.title}}</h2>
+				<p>By {{listing.bookDetails.author}}</p>
+			</div>		
+			<div class="item item-body">
+				<!--<center><img class="flex" ng-src="{{imageSrc}}" height="" width="" ></center>-->
+				<center><img class="flex" src="{{imageSrc}}" height="" width=""></center>
+			</div>
+			<div class="item">
+				<h2>Who listed it?</h2>
+			</div>	
+			<div class="item">
+				<h2>Listed By {{listing.listingDetails.user}}</h2>
+				<h2>Price Rs{{listing.listingDetails.price}}/-</h2>
+				<p>The item is located at {{listing.listingDetails.location}}</p>
+			</div>	
+		</div>
+		<button class="button button-block button-positive" ng-click="saveListing()">
+			Post This Listing
+		</button>
+	</ion-content>
+</ion-view>
