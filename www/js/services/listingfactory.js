@@ -4,9 +4,9 @@
 		
 		var factory = {};
 		
-		factory.new = function(){
+		factory.new = function(data){
 			
-			return $http.post('');
+			return $http.post('charcoalbeak-arcledev.rhcloud.com/api/createlisting/',data);
 			
 		} 
 		
